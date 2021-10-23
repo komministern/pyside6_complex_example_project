@@ -41,30 +41,4 @@ class MyView(QtCore.QObject):
 
         self.mainwindow = MyMainwindow()
 
-        # # The following hack decides the current working directory. If the app is run as a bundled
-        # # PyInstaller executable, the cwd is given by the _MEIPASS attribute at runtime.
-        # if hasattr(sys, '_MEIPASS'):
-        #     cwd = sys._MEIPASS
-        # else:
-        #     cwd = os.path.abspath('.')
-        # resources = os.path.join(cwd, 'resources')
-        # icon = os.path.join(resources, 'icon.ico')
-        # self.setWindowIcon(QtGui.QIcon(icon))
         
-        # # The setupUi method sets up the main window as we have laid it out in the Qt Designer.
-        # self.setupUi(self)
-
-    # def closeEvent(self, event):
-    #     """
-    #         This method overrides the mainwindows closeEvent method, which gets called when 
-    #         the user tries to close the mainwindow. 
-    #     """
-
-    #     # Ignore the close event. We need to take care of some business before we allow the
-    #     # app to close. (If we had not ignored this event, the window would close immediately.)
-    #     event.ignore()
-
-    #     # Now we emit our own signal quit. This will be caught by the Presenter which will
-    #     # call its own quit method. There we have full control of what shall happen before
-    #     # exiting the application.
-    #     self.myQuitSignal.emit() 
